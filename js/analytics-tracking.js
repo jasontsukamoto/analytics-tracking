@@ -1,11 +1,11 @@
 var counter = {};
 
 document.addEventListener('click', function(event) {
-  var property = 'elementName:' + event.target.nodeName;
+  var property = event.target.nodeName;
   if (event.target.className) {
-    property += ' className:' + event.target.className;
+    property += ' .' + event.target.className;
   } else if (event.target.id) {
-    property += ' id:' + event.target.id;
+    property += ' #' + event.target.id;
   }
 
   if(counter.hasOwnProperty(property)) {
